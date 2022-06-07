@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tools {
+    {
        tool name: 'Maven3.6', type: 'maven'
     }
     stages {
