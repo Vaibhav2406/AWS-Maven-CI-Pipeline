@@ -1,14 +1,10 @@
 pipeline {
     agent any
-    environment {
-    MAVEN_HOME = tool name: 'Maven3.6', type: 'maven'
-}
-    stages {
-        stage('Build') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Vaibhav2406/AWS-Maven-CI-Pipeline.git'
-            }
-        }    
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "Maven3.6"
+    }
+    stages {    
         stage('Maven Compile') {
             steps {
                sh "mvn compile"
