@@ -8,7 +8,7 @@ pipeline {
         }    
         stage('Maven Commit') {
             steps {
-               bat "mvn commit"
+               sh "mvn commit"
             }
         }
         
