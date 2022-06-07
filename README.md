@@ -1,2 +1,1 @@
-# AWS-Maven-CI-Pipeline
-AWS-Maven-CI-Pipeline
+Sample Java Applicaiton V3.2
