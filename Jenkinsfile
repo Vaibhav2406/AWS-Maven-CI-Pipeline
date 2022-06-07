@@ -6,9 +6,9 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Vaibhav2406/AWS-Maven-CI-Pipeline.git'
             }
         }    
-        stage('Maven Commit') {
+        stage('Maven Compile') {
             steps {
-               sh "mvn commit"
+               sh "mvn compile"
             }
         }
         
