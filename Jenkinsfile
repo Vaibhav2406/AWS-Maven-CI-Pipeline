@@ -12,7 +12,7 @@ pipeline {
         }    
         stage('Maven Commit') {
             steps {
-               mvn 'commit'
+               mvn commit
             }
         }
         
