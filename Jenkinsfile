@@ -15,7 +15,21 @@ pipeline {
                sh "mvn compile"
             }
         }
-        
+        stage('Maven CodeReview') {
+            steps {
+               sh "mvn -P metrics pmd:pmd"
+            }
+        }
+        stage('Maven Unit Testing') {
+            steps {
+               sh "mvn test"
+            }
+        }
+        stage('Maven Code Coverage') {
+            steps {
+               sh "mvn cobertura:cobertura -Dcobertura.report.format=xml"
+            }
+        }
     }
 
 }
