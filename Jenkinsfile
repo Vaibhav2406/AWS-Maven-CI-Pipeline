@@ -25,6 +25,11 @@ pipeline {
                sh "mvn cobertura:cobertura -Dcobertura.report.format=xml"
             }
         }
+        stage('Maven Package') {
+            steps {
+               sh "mvn package"
+            }
+        }
     }
 
 }
